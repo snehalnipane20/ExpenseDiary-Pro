@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ExpenseDiary Pro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>💰 ExpenseDiary Pro</h1>
+
+    <p class="subtitle">
+      Smart Daily Expense Management System
+    </p>
+
+    <div class="form-box">
+
+      <input
+        type="text"
+        id="title"
+        placeholder="Expense Title"
+      >
+
+      <input
+        type="number"
+        id="amount"
+        placeholder="Amount"
+      >
+
+      <input 
+        type="date"
+        id="date"
+    >
+
+      <select id="category">
+
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Fuel</option>
+        <option>Shopping</option>
+        <option>Bills</option>
+        <option>Recharge</option>
+        <option>Deposit</option>
+        <option>Loan</option>
+
+      </select>
+
+      <button onclick="addExpense()">
+        Add Expense
+      </button>
+
+    </div>
+
+    <h2>All Expenses</h2>
+    
+    <div id="summaryCards"></div>
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search expense..."
+      onkeyup="loadExpenses()"
+    >
+
+    <select
+      id="filterCategory"
+      onchange="loadExpenses()"
+    >
+
+      <option value="All">
+        All Categories
+      </option>
+
+      <option value="Food">Food</option>
+
+      <option value="Travel">Travel</option>
+
+      <option value="Fuel">Fuel</option>
+
+      <option value="Shopping">Shopping</option>
+
+      <option value="Bills">Bills</option>
+
+      <option value="Recharge">Recharge</option>
+
+      <option value="Deposit">Deposit</option>
+
+      <option value="Loan">Loan</option>
+
+    </select>
+    
+    <div id="expenses"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
